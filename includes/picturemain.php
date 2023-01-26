@@ -1,0 +1,1 @@
+<img class="bg-img" src="images/2384070.jpg">

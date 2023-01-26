@@ -18,3 +18,8 @@ Link:https://trello.com/invite/b/O1c1mD0v/ATTI910dad93ff042493d9f8dae1eb662a851E
 8.Waiting for the next step we will share Q&A and set u the SQL plus Docker
 
 Im a starting to make the header to include in the 3 pages
+
+9.Insert a Video for index.php 
+Link:https://www.pinterest.ch/pin/bar-pub-quiz-trivia-night-animated-template--465489311496075797/
+
+10. Working on placing the need goods
