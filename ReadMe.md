@@ -16,3 +16,5 @@ Link:https://www.figma.com/file/8EAGciYSEM1ghZRCk23pVo/Trivia-Quiz?node-id=0%3A1
 Link:https://trello.com/invite/b/O1c1mD0v/ATTI910dad93ff042493d9f8dae1eb662a851ECF247A/trivia-quiz
 
 8.Waiting for the next step we will share Q&A and set u the SQL plus Docker
+
+Im a starting to make the header to include in the 3 pages
