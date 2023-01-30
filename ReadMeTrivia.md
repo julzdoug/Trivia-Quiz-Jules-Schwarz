@@ -23,3 +23,9 @@ Im a starting to make the header to include in the 3 pages
 Link:https://www.pinterest.ch/pin/bar-pub-quiz-trivia-night-animated-template--465489311496075797/
 
 10. Working on placing the need goods
+
+11. I copy from the frist directory my sql the Docker file and compose it up and starte a new data base
+
+12. We discuss the Data base and structur so i start filling up my question and answer 
+
+13. Finish my category ch-norris 
