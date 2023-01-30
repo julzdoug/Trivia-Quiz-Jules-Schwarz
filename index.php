@@ -14,12 +14,11 @@
 <body class="bg-success" style="--bs-bg-opacity: .5;">
 
     <?php include "includes/header.php" ?>
-    <div class="container">
-    <div class="row col">
+    <div class="container d-flex justify-content-center mt-5 mb-5">
+    <div class="col-8">
     <?php include "includes/video.php"?>
-    <div class="col">
+    <div class="col-4">
     <?php include "includes/maindd.php" ?>
-    </div>
     </div>
 </div>
     <?php include "includes/footer.php" ?>
