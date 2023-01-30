@@ -41,3 +41,7 @@ Link:https://www.pinterest.ch/pin/bar-pub-quiz-trivia-night-animated-template--4
 18. Next is the implement the next button so the next question will come.
 
 19.Trying to make it mobile friendely Nest hubnot really working
+
+20.change bt untill it fit with col etc
+
+21.focus now on php question switch and categories
