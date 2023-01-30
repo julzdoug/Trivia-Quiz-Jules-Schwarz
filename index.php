@@ -12,11 +12,18 @@
 </head>
 
 <body class="bg-success" style="--bs-bg-opacity: .5;">
-    <?php include "includes/header.php" ?>
-    <?php include "includes/video.php"?>
-    <?php include "includes/maindd.php" ?>
-    <?php include "includes/footer.php" ?>
 
+    <?php include "includes/header.php" ?>
+    <div class="container">
+    <div class="row col">
+    <?php include "includes/video.php"?>
+    <div class="col">
+    <?php include "includes/maindd.php" ?>
+    </div>
+    </div>
+</div>
+    <?php include "includes/footer.php" ?>
+    
 </body>
 
 </html>

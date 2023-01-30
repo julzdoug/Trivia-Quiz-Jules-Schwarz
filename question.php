@@ -13,11 +13,13 @@
 
 <body class="bg-success" style="--bs-bg-opacity: .5;">
     <?php require "includes/db.php";
-    $id = 101;
+    $id = 121;
     $question = fetchQuestionByID($id, $dbConnection);
     ?>
     <?php include "includes/header.php" ?>
+    <div class="mt-5">
     <?php include "includes/questionsheet.php" ?>
+    </div>
     <?php include "includes/footer.php" ?>
 
 

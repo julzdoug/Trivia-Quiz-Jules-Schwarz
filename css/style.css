@@ -14,6 +14,12 @@ footer {
     height:100%;
     object-fit: cover;
 }
+main {
+    position: relative;
+    z-index: -1;
+    object-fit: cover;
+    display:block;
+}
 #backgroundimage {
     background: url("images/2384070.png");
     width: 1024px;

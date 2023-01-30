@@ -39,3 +39,5 @@ Link:https://www.pinterest.ch/pin/bar-pub-quiz-trivia-night-animated-template--4
 17. it worked so im removing the print_r status
 
 18. Next is the implement the next button so the next question will come.
+
+19.Trying to make it mobile friendely Nest hubnot really working
