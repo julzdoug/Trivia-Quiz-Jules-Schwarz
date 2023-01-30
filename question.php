@@ -10,11 +10,15 @@
     <link rel="stylesheet" href="css/style.css">
     
 </head>
-<body>
+
 <body class="bg-success" style="--bs-bg-opacity: .5;">
+    <?php require "includes/db.php";
+    $id = 101;
+    $question = fetchQuestionByID($id, $dbConnection);
+    ?>
     <?php include "includes/header.php" ?>
     <?php include "includes/questionsheet.php" ?>
     <?php include "includes/footer.php" ?>
 
-</body>
+
 </body>

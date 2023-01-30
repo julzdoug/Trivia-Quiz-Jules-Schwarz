@@ -1,20 +1,30 @@
 <div class="container mt-sm-5 my-1">
     <div class="question ml-sm-5 pl-sm-5 pt-2">
-        <div class="py-2 h5"><b>Q. which option best describes your job role?</b></div>
-        <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3" id="options">
-            <label class="options">Small Business Owner or Employee
+        <div class="py-2 h5"><b><?php echo $question["question_text"]; ?></b></div>
+        <br>
+        <br>
+        <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3 m-3" id="options">
+            <label class="options"><b><?php echo $question['answer-1']; ?></b>
                 <input type="radio" name="radio">
                 <span class="checkmark"></span>
             </label>
-            <label class="options">Nonprofit Owner or Employee
+            <label class="options"><b><?php echo $question['answer-2']; ?></b>
+                
                 <input type="radio" name="radio">
                 <span class="checkmark"></span>
             </label>
-            <label class="options">Journalist or Activist
+            <label class="options"><b><?php echo $question['answer-2']; ?></b>
+                
                 <input type="radio" name="radio">
                 <span class="checkmark"></span>
             </label>
-            <label class="options">Other
+            <label class="options"><b><?php echo $question['answer-4']; ?></b>
+                
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <label class="options"><b><?php echo $question['answer-5']; ?></b>
+                
                 <input type="radio" name="radio">
                 <span class="checkmark"></span>
             </label>

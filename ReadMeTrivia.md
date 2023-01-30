@@ -29,3 +29,13 @@ Link:https://www.pinterest.ch/pin/bar-pub-quiz-trivia-night-animated-template--4
 12. We discuss the Data base and structur so i start filling up my question and answer 
 
 13. Finish my category ch-norris 
+
+14. together in the class we create a data fetch and output option.
+
+15. we saw with print_r if the question are the right one with the ID
+
+16. I Linked the output page with the question
+
+17. it worked so im removing the print_r status
+
+18. Next is the implement the next button so the next question will come.
