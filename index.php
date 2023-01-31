@@ -1,3 +1,7 @@
+<?php include "includes/data-collector.php";
+
+require "includes/db.php";
+?>
 <!doctype html>
 <html lang="en">
 

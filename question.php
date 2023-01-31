@@ -1,3 +1,5 @@
+<?php require "includes/tools.php"; ?>
+    
 <!doctype html>
 <html lang="en">
 
@@ -12,9 +14,11 @@
 </head>
 
 <body class="bg-success" style="--bs-bg-opacity: .5;">
-    <?php require "includes/db.php";
+<?php require "includes/db.php";
+    
     $id = 105;
     $question = fetchQuestionByID($id, $dbConnection);
+    
     ?>
     <?php include "includes/header.php" ?>
     <div class="container d-flex justify-content-center mt-5 mb-5 ">

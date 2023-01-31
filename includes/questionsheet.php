@@ -1,3 +1,6 @@
+<?php include "tools.php";
+include "data-collector.php" ?>
+
 <form id='quiz-form' action='question.php' onsubmit="return navigate('next');">
 <div class="container mt-sm-5 my-1">
     <div class="question ml-sm-5 pl-sm-5 pt-2">
@@ -23,14 +26,21 @@
         }   
         ?>
         <br>
+        <input type="hidden" id="questionNum" name="questionNum" value="10">
+        <input type="hidden" id="lastQuestionIndex" name="lastQuestionIndex" value="-1">
+        <input type="hidden" id="indexStep" name="indexStep" value="1">
+        
         </div>
     <div class="d-flex align-items-center pt-3">
         <div id="prev">
-            <button class="btn btn-primary">Previous</button>
-        </div>
+            <button class="btn btn-primary" type='submit' onclick="navigatePrevious();">Previous</button>
+          </div>
         <div class="ml-auto mr-sm-5">
             <button class="btn btn-success" type='submit'>Next</button>
-        </div>
+          </div>
     </div>
+
+
+
 </div>
 </form>
