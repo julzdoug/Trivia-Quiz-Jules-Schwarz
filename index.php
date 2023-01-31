@@ -15,9 +15,9 @@
 
     <?php include "includes/header.php" ?>
     <div class="container d-flex justify-content-center mt-5 mb-5">
-    <div class="col-8">
+    <div class="col">
     <?php include "includes/video.php"?>
-    <div class="col-4">
+    <div class="col-sm-4 col mt-3">
     <?php include "includes/maindd.php" ?>
     </div>
 </div>

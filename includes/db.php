@@ -16,6 +16,8 @@ $dbConnection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 // Query FUNCTIONS ---------------------------------------------------------------
 
+
+
 function fetchQuestionByID($id, $dbConnection) {
 
     
@@ -25,6 +27,4 @@ function fetchQuestionByID($id, $dbConnection) {
     return $row; // schould show a table row with data to a specific question back
     
 }
-
-
 ?>
