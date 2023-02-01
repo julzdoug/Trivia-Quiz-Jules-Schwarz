@@ -1,8 +1,7 @@
-
-
 <?php
 
 include "includes/db.php";
+include "includes/tools.php";
 //Ich starte die Session um die eingabe zu speichern und zugreiffen zu können
 
 //inlcude the tools for pretty print to specific the data and labe
@@ -15,6 +14,7 @@ if (isset($_SESSION["quiz"])) {
     $quiz = null;
 }
 
+prettyPrint($_POST, '$_POST =');
 
 if (isset($_POST["lastQuestionIndex"])) {
     $lastQuestionIndex = intval($_POST["lastQuestionIndex"]);
@@ -24,15 +24,13 @@ if (isset($_POST["lastQuestionIndex"])) {
 
 
 $scriptName = $_SERVER["SCRIPT_NAME"];
-echo "scriptName = " . $scriptName . "<br>";
 
 if (str_contains($scriptName, 'index')) {
     /* session_unset(); */
 
     $quiz = null;
-} else if (str_contains($scriptName, 'questions')) {
-    
-
+} 
+else if (str_contains($scriptName, 'questions')) {
     if ($lastQuestionIndex === -1) {
         $question = intval ($_POST['questionNum']);
 
@@ -66,13 +64,13 @@ if (str_contains($scriptName, 'index')) {
 }
     if(isset($quiz) && $currentQuestionIndex >= 0) {
         $_SESSION["quiz"] = $quiz;
-    $_SESSION["quiz"]["currentQuestionIndex"] = $currentQuestionIndex;
-    $_SESSION["quiz"]["lastQuestionIndex"] = $lastQuestionIndex;
+        $_SESSION["quiz"]["currentQuestionIndex"] = $currentQuestionIndex;
+        $_SESSION["quiz"]["lastQuestionIndex"] = $lastQuestionIndex;
     }
     if ($lastQuestionIndex >= 0) {
         $questionName = "question-" . $lastQuestionIndex;
         $_SESSION[$questionName] = $_POST;
     }
-/* prettyPrint($_SESSION, '$_SESSION ='); */
+prettyPrint($_SESSION, '$_SESSION =');
 
 ?>

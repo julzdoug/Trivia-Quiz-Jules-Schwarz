@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 <?php include "includes/data-collector.php";
-require "includes/tools.php";
+
  ?>
 <!doctype html>
 <html lang="en">

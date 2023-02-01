@@ -1,6 +1,5 @@
-<?php include "includes/data-collector.php";
-
-require "includes/tools.php";
+<?php 
+    include "includes/data-collector.php";
 ?>
 <form id='quiz-form' action='question.php' method="post" onsubmit="return navigate('next');">
     <div class="container mt-sm-5 my-1">
