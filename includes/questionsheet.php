@@ -1,7 +1,6 @@
-<?php
-include "data-collector.php";
-include "db.php";
-include "tools.php";
+<?php include "includes/data-collector.php";
+
+require "includes/tools.php";
 ?>
 <form id='quiz-form' action='question.php' method="post" onsubmit="return navigate('next');">
     <div class="container mt-sm-5 my-1">
@@ -15,9 +14,9 @@ include "tools.php";
             <?php
             if (isset($quiz["questionIDSequence"])) {
                 $id = $quiz["questionIDSequence"][$currentQuestionIndex];
-                $question = fetchQuestionByID($id, $dbConnection);
+                
             }
-
+            $question = fetchQuestionByID($id, $dbConnection);
            
                 //comment.
             // This code is made to Check and only display the answer of the question data on mySQLAdmin 

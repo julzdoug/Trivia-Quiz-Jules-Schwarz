@@ -24,8 +24,9 @@ function fetchQuestionByID($id, $dbConnection) {
     $row = $sqlStatement->fetch(PDO::FETCH_ASSOC);
     
     return $row; // schould show a table row with data to a specific question back
-    
-} 
+
+}
+;
 function fetchquestionIDSequence($topic, $questionNum, $dbConnection)
 {
     $query = "SELECT `id` FROM `question` WHERE `topic`='$topic' ORDER BY RAND() LIMIT $questionNum";
@@ -35,4 +36,5 @@ function fetchquestionIDSequence($topic, $questionNum, $dbConnection)
     return $row; // schould show a table row with data to a specific question back
 
 }
+;
 ?>
