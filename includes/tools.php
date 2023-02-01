@@ -1,10 +1,12 @@
 <?php
 
-function prettyPrint($value, $label)
-{
-    if ($label) print "<pre>$label";
-    else print "<pre>";
+function prettyPrint($value, $label = '') {
+    echo "<pre>";
+    if ($label) {
+        echo "$label\n";
+    }
     print_r($value);
-    print "</pre>";
+    echo "</pre>";
 }
+
 ?>

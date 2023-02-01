@@ -47,3 +47,5 @@ Link:https://www.pinterest.ch/pin/bar-pub-quiz-trivia-night-animated-template--4
 21.focus now on php question switch and categories
 
 22. include a picture that is responsive only device fails is galaxy fold
+
+23. I had a problem with declaring the question variable so we recodet it 

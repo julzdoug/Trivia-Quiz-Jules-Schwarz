@@ -19,8 +19,6 @@ $dbConnection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
 function fetchQuestionByID($id, $dbConnection) {
-
-    
     $sqlStatement = $dbConnection->query("SELECT * FROM `questions` WHERE `id` = $id");
     $row = $sqlStatement->fetch(PDO::FETCH_ASSOC);
     
