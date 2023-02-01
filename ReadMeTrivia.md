@@ -49,3 +49,6 @@ Link:https://www.pinterest.ch/pin/bar-pub-quiz-trivia-night-animated-template--4
 22. include a picture that is responsive only device fails is galaxy fold
 
 23. I had a problem with declaring the question variable so we recodet it 
+
+24. I added the new code from the scool and run itno the same malfunctio
+: Cannot redeclare fetchQuestionByID() (previously declared in /var/www/php/includes/db.php:21) in

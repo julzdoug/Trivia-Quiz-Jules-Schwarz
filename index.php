@@ -1,6 +1,7 @@
 <?php session_start(); ?>
 <?php include "includes/data-collector.php";
-include "includes/db.php"; ?>
+require "includes/tools.php";
+ ?>
 <!doctype html>
 <html lang="en">
 
@@ -13,7 +14,7 @@ include "includes/db.php"; ?>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="bg-success" style="--bs-bg-opacity: .5;">
+<body class="bg-success" style="--bs-bg-opacity: .5;"  onload="prettyPrint()">
 
     <?php include "includes/header.php" ?>
 

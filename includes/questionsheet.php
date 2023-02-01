@@ -1,18 +1,25 @@
 <?php
 include "data-collector.php";
 include "db.php";
+include "tools.php";
 ?>
-<form id='quiz-form' action='question.php' onsubmit="return navigate('next');">
+<form id='quiz-form' action='question.php' method="post" onsubmit="return navigate('next');">
     <div class="container mt-sm-5 my-1">
         <div class="question ml-sm-5 pl-sm-5 pt-2">
             <div class="py-2 h5"><b>
-                    <?php //echo $question["question_text"]; ?>
+                    <?php echo ($currentQuestionIndex + 1); ?>of<?php echo $quiz["questionNum"]; ?>
+                    <br>
+                    <?php echo $question["question_text"]; ?>
                 </b></div>
             <br>
             <?php
-            $id = 103;
-            $question = fetchQuestionByID($id, $dbConnection);
-            print_r($question);//comment.
+            if (isset($quiz["questionIDSequence"])) {
+                $id = $quiz["questionIDSequence"][$currentQuestionIndex];
+                $question = fetchQuestionByID($id, $dbConnection);
+            }
+
+           
+                //comment.
             // This code is made to Check and only display the answer of the question data on mySQLAdmin 
             $correct = $question["correct"];
             //this will get the correct answer and count points for each correct answer 
