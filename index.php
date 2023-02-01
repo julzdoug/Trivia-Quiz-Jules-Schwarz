@@ -1,11 +1,6 @@
-<?php session_start();
-
-?>
+<?php session_start(); ?>
 <?php include "includes/data-collector.php";
-include "includes/db.php";
-
-
-?>
+include "includes/db.php"; ?>
 <!doctype html>
 <html lang="en">
 
@@ -17,17 +12,27 @@ include "includes/db.php";
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body class="bg-success" style="--bs-bg-opacity: .5;">
-    <?php include "includes/header.php" 
-     ?>
+
+    <?php include "includes/header.php" ?>
+
     <div class="container d-flex justify-content-center mt-5 mb-5">
-    <div class="col">
-    <?php include "includes/video.php"?>
-    <div class="col-sm-4 col mt-3">
-    <?php include "includes/maindd.php" ?>
-    </div>
-</div>
-    <?php include "includes/footer.php" ?>
+
+        <div class="col">
+
+            <?php include "includes/video.php" ?>
+
+            <div class="col-sm-4 col mt-3">
+
+                <?php include "includes/maindd.php" ?>
+
+            </div>
+
+        </div>
+
+        <?php include "includes/footer.php" ?>
+
 </body>
 
 </html>

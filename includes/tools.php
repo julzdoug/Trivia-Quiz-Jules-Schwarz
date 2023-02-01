@@ -1,6 +1,7 @@
 <?php
 
-function prettyPrint($value, $label = '') {
+function prettyPrint($value, $label = '')
+{
     echo "<pre>";
     if ($label) {
         echo "$label\n";

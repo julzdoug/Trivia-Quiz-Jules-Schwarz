@@ -1,4 +1,5 @@
 
+
 <?php
 
 
@@ -17,38 +18,42 @@ if (isset($_SESSION["quiz"])) {
 
 if (isset($_POST["lastQuestionIndex"])) {
     $lastQuestionIndex = intval($_POST["lastQuestionIndex"]);
-}else {
-$lastQuestionIndex = -1;
+} else {
+    $lastQuestionIndex = -1;
 }
 
 $scriptName = $_SERVER["SCRIPT_NAME"];
-echo "scriptName = ". $scriptName . "<br>";
+echo "scriptName = " . $scriptName . "<br>";
 
-if (str_contains($scriptName, 'index')){
+if (str_contains($scriptName, 'index')) {
     session_unset();
 
     $quiz = null;
-}else if (str_contains($scriptName, 'questions')){
+} else if (str_contains($scriptName, 'questions')) {
+    $question = $_POST['questionNum'];
+
     if ($lastQuestionIndex === -1) {
+
         $quiz = array(
             "topic" => $_POST["topic"],
-            "questionNum" => $_POST["questionNum"],
+            "questionNum" => $questionNum,
+            "lastQuestionIndex" => $lastQuestionIndex,
             "currentQuestionIndex" => -1,
             "questionIDSequence" => array(),
 
         );
     }
-   
+    prettyPrint($quiz, '$quiz =');
 
 
     $indexStep = 1;
-
+    prettyPrint($indexStep, '$indexStep =');
     if (isset($_POST["indexStep"])) {
         $indexStep = intval($_POST["indexStep"]);
 
     }
     $currentQuestionIndex = $lastQuestionIndex + $indexStep;
-
+    prettyPrint($lastQuestionIndex, '$lastQuestionIndex =');
 }
 
-    ?>
+?>
