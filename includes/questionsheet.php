@@ -2,15 +2,7 @@
     include "includes/data-collector.php";
 ?>
 <form id='quiz-form' action='question.php' method="post" onsubmit="return navigate('next');">
-    <div class="container mt-sm-5 my-1">
-        <div class="question ml-sm-5 pl-sm-5 pt-2">
-            <div class="py-2 h5"><b>
-                    <?php echo ($currentQuestionIndex + 1); ?>of<?php echo $quiz["questionNum"]; ?>
-                    <br>
-                    <?php echo $question["question_text"]; ?>
-                </b></div>
-            <br>
-            <?php
+<?php
             if (isset($quiz["questionIDSequence"])) {
                 $id = $quiz["questionIDSequence"][$currentQuestionIndex];
                 
@@ -34,7 +26,18 @@
                 }
             }
             ?>
-            <input type="hidden" for="questionNum" class="form-control" id="questionNum" name="questionNum" value="15" />
+    <div class="container mt-sm-5 my-1">
+        <div class="question ml-sm-5 pl-sm-5 pt-2">
+            <div class="py-2 h5"><b>
+                    <?php echo ($currentQuestionIndex + 1); ?>of<?php echo $quiz["questionNum"]; ?>
+                    <br>
+                    <?php echo $question["question_text"]; ?>
+                </b></div>
+            <br>
+            <!--new try -->
+            <input type="hidden" id="questionNum" value="<?php echo $quiz["questionNum"]; ?>" />
+            <input type="hidden" id="lastQuestionIndex" name="lastQuestionIndex" value="<?php echo $currentQuestionIndex; ?>" />
+            <input type="hidden" id="indexStep" name="indexStep" value="1"> 
         
             <br>
         </div>

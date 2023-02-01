@@ -32,7 +32,7 @@ if (str_contains($scriptName, 'index')) {
 } 
 else if (str_contains($scriptName, 'questions')) {
     if ($lastQuestionIndex === -1) {
-        $question = intval ($_POST['questionNum']);
+        $question = intval($_POST['questionNum']);
 
         $questionIDSequence = fetchquestionIDSequence(
             $_POST["topic"],
