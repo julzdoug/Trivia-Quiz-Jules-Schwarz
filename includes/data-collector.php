@@ -14,7 +14,7 @@ if (isset($_SESSION["quiz"])) {
     $quiz = null;
 }
 
-prettyPrint($_POST, '$_POST =');
+/* prettyPrint($_POST, '$_POST ='); */
 
 if (isset($_POST["lastQuestionIndex"])) {
     $lastQuestionIndex = intval($_POST["lastQuestionIndex"]);
@@ -26,18 +26,18 @@ if (isset($_POST["lastQuestionIndex"])) {
 $scriptName = $_SERVER["SCRIPT_NAME"];
 
 if (str_contains($scriptName, 'index')) {
-    /* session_unset(); */
+    session_unset(); 
 
     $quiz = null;
 } 
-else if (str_contains($scriptName, 'questions')) {
+else if (str_contains($scriptName, 'question')) {
     if ($lastQuestionIndex === -1) {
-        $question = intval ($_POST['questionNum']);
+        $questionNum = intval($_POST['questionNum']);
 
         $questionIDSequence = fetchquestionIDSequence(
             $_POST["topic"],
             $questionNum,
-            $bdConnection
+            $dbConnection
         );
         $questionNum = min(count($questionIDSequence), $questionNum);
 
@@ -46,22 +46,40 @@ else if (str_contains($scriptName, 'questions')) {
             "questionNum" => $questionNum,
             "lastQuestionIndex" => $lastQuestionIndex,
             "currentQuestionIndex" => -1,
-            "questionIDSequence" => array(),
+            "questionIDSequence" => $questionIDSequence
 
         );
     }
-    prettyPrint($quiz, '$quiz =');
+    
 
 
     $indexStep = 1;
-    prettyPrint($indexStep, '$indexStep =');
+   /*  prettyPrint($indexStep, '$indexStep ='); */
     if (isset($_POST["indexStep"])) {
         $indexStep = intval($_POST["indexStep"]);
 
     }
     $currentQuestionIndex = $lastQuestionIndex + $indexStep;
-    prettyPrint($lastQuestionIndex, '$lastQuestionIndex =');
-}
+   
+
+
+    if ($currentQuestionIndex + 1 < $quiz["questionNum"]) {
+        $actionUrl = "question.php";
+    }
+    else { /* $currentQuestionIndex >= $quiz["questionNum"]  */
+        $actionUrl = "report.php";
+          }
+} else if (str_contains($scriptName, 'report')) {
+    $currentQuestionIndex = -1;
+ 
+ }
+// report
+
+
+   
+
+
+
     if(isset($quiz) && $currentQuestionIndex >= 0) {
         $_SESSION["quiz"] = $quiz;
         $_SESSION["quiz"]["currentQuestionIndex"] = $currentQuestionIndex;
@@ -71,6 +89,6 @@ else if (str_contains($scriptName, 'questions')) {
         $questionName = "question-" . $lastQuestionIndex;
         $_SESSION[$questionName] = $_POST;
     }
-prettyPrint($_SESSION, '$_SESSION =');
+/* prettyPrint($_SESSION, '$_SESSION ='); */
 
 ?>

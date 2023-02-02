@@ -5,6 +5,7 @@ footer {
 .container{
     width:fit-content;
 }
+
 .vids {
     position: relative;
     z-index: -1;
@@ -14,10 +15,13 @@ footer {
     height:100%;
     object-fit: cover;
 }
-main {
-    position: relative;
-    z-index: -1;
-    object-fit: cover;
-    display:block;
-}
+.stay {
+    min-height:100vh;
+    min-height: 100dvh;
 
+    display: grid;
+    grid-template-rows:
+    auto
+    1fr
+    auto;
+}

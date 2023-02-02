@@ -29,7 +29,7 @@ function fetchQuestionByID($id, $dbConnection) {
 ;
 function fetchquestionIDSequence($topic, $questionNum, $dbConnection)
 {
-    $query = "SELECT `id` FROM `question` WHERE `topic`='$topic' ORDER BY RAND() LIMIT $questionNum";
+    $query = "SELECT `id` FROM `questions` WHERE `topic`='$topic' ORDER BY RAND() LIMIT $questionNum";
     $sqlStatement = $dbConnection->query($query);
     $row = $sqlStatement->fetchAll(PDO::FETCH_COLUMN, 0);
 
@@ -37,4 +37,6 @@ function fetchquestionIDSequence($topic, $questionNum, $dbConnection)
 
 }
 ;
+
+
 ?>

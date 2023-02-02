@@ -1,7 +1,5 @@
 <?php session_start(); ?>
-<?php include "includes/data-collector.php";
 
- ?>
 <!doctype html>
 <html lang="en">
 
@@ -14,26 +12,18 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="bg-success" style="--bs-bg-opacity: .5;"  onload="prettyPrint()">
-
+<body class="bg-success stay" style="--bs-bg-opacity: .5;">
     <?php include "includes/header.php" ?>
-
     <div class="container d-flex justify-content-center mt-5 mb-5">
-
-        <div class="col">
-
-            <?php include "includes/video.php" ?>
-
-            <div class="col-sm-4 col mt-3">
-
-                <?php include "includes/maindd.php" ?>
-
+        <div class="row">
+            <div class="col">
+                <?php include "includes/video.php" ?>
+                <div class="col-sm-4 col mt-3">
+                    <?php include "includes/maindd.php" ?>
+                </div>
             </div>
-
         </div>
-
-        <?php include "includes/footer.php" ?>
-
+    </div>
+    <?php include "includes/footer.php" ?>
 </body>
-
 </html>
