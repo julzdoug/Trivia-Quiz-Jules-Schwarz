@@ -1,7 +1,5 @@
 <?php session_start(); ?>
-<?php include "includes/data-collector.php";
 
- ?>
 <!doctype html>
 <html lang="en">
 

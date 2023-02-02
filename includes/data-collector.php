@@ -26,18 +26,18 @@ if (isset($_POST["lastQuestionIndex"])) {
 $scriptName = $_SERVER["SCRIPT_NAME"];
 
 if (str_contains($scriptName, 'index')) {
-    /* session_unset(); */
+    session_unset(); 
 
     $quiz = null;
 } 
-else if (str_contains($scriptName, 'questions')) {
+else if (str_contains($scriptName, 'question')) {
     if ($lastQuestionIndex === -1) {
-        $question = intval($_POST['questionNum']);
+        $questionNum = intval($_POST['questionNum']);
 
         $questionIDSequence = fetchquestionIDSequence(
             $_POST["topic"],
             $questionNum,
-            $bdConnection
+            $dbConnection
         );
         $questionNum = min(count($questionIDSequence), $questionNum);
 
@@ -46,11 +46,11 @@ else if (str_contains($scriptName, 'questions')) {
             "questionNum" => $questionNum,
             "lastQuestionIndex" => $lastQuestionIndex,
             "currentQuestionIndex" => -1,
-            "questionIDSequence" => array(),
+            "questionIDSequence" => $questionIDSequence
 
         );
     }
-    prettyPrint($quiz, '$quiz =');
+    
 
 
     $indexStep = 1;
@@ -60,7 +60,15 @@ else if (str_contains($scriptName, 'questions')) {
 
     }
     $currentQuestionIndex = $lastQuestionIndex + $indexStep;
-    prettyPrint($lastQuestionIndex, '$lastQuestionIndex =');
+   
+
+
+    if ($currentQuestionIndex + 1 < $quiz["questionNum"]) {
+        $actionUrl = "question.php";
+    }
+    else { /* $currentQuestionIndex >= $quiz["questionNum"]  */
+        $actionUrl = "report.php";
+}
 }
     if(isset($quiz) && $currentQuestionIndex >= 0) {
         $_SESSION["quiz"] = $quiz;
