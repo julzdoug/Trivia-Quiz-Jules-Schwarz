@@ -1,19 +1,28 @@
 
 <form id="quiz-form" action="question.php" method="post" onsubmit="return navigate('next');">
-  <div class="align-items">
-      <label for="quiz-form" class="form-label">Quiz choose topic</label>
-      <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-      <option selected>Open this select menu</option>
+  <div class="align-items form-outline d-inline">
+      <label for="quiz-topic" class="form-label">Quiz choose topic</label>
+      <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="topic" name="topic">
+      
+      <option value="music">Music</option>
       <option value="ch-norris">Chuck Norris</option>
-      <option value="Geography">Geography</option>
-      <option value="History">History</option>
+      <option value="animals">Animals</option>
+      <option value="movies">Movies</option>
+      <option value="d-n-d">Dungeons-n-Dragons</option>
+      <option value="astronautics">Astronautics</option>
+      <option value="technology">Technology</option>
+      <option value="ai">Artificial Intelligence</option>
+      <option value="geography">Geography</option>
+      <option value="sports">Sports</option>
+      <option value="science">Science</option>
+      <option value="informatics">Informatics</option>
+      <option value="gen-knowledge">General Knowledge</option>
+
 </select>
       <br>
-      <div class="form-outline d-inline">
-       
         <label class="form-label" for="questionNum">How many question choose between (5-40)</label>
-        <input type="number" for="questionNum" class="form-control" id="questionNum" name="questionNum" min="5" max="40" value="10" />
-      </div>
+        <input type="number" for="questionNum" class="form-control" id="questionNum" name="questionNum" min="101" max="130" value="101" />
+      
       <input type="hidden" id="lastQuestionIndex" name="lastQuestionIndex" value="-1">
         <input type="hidden" id="indexStep" name="indexStep" value="1">
         

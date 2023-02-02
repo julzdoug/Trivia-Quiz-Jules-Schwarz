@@ -52,3 +52,9 @@ Link:https://www.pinterest.ch/pin/bar-pub-quiz-trivia-night-animated-template--4
 
 24. I added the new code from the scool and run itno the same malfunctio
 : Cannot redeclare fetchQuestionByID() (previously declared in /var/www/php/includes/db.php:21) in
+
+25. I got some Input of chris that my dropdown is not working issue could be that the option and sellect need to be in the menu.
+
+26. I change the Dropdown to the select and option dropdown and it works now
+
+27. we have a new lesson to iterate the question randomly and see if it works
