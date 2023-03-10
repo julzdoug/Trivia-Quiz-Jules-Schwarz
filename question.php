@@ -25,10 +25,8 @@ include "includes/data-collector.php"; ?>
     }
     $question = fetchQuestionByID($id, $dbConnection);
     ?>
-    <div class="container d-flex justify-content-center align-items-md-center mt-5 mb-3 ">
-        <div class="col">
-            <div class="col">
-                <?php include "includes/picturemain.php" ?>
+    <div class="container">
+                     <?php include "includes/picturemain.php" ?>
                 <form class="col" action="<?php echo $actionUrl; ?>" method="post">
                     <div class="container mt-sm-3 my-1">
                         <div class="question ml-sm-3 pl-sm-5 pt-2">
@@ -64,7 +62,8 @@ include "includes/data-collector.php"; ?>
                                 echo "<div class='form-check'>
                                 <input class='form-check-input' type='radio' name='single-choice' id='$answerColumnName' value='$value' required='required'>    
                                 <label class='form-check-label' for='$answerColumnName'><b>$answerText</b></label>
-                                 </div>";
+                                 </div>
+                                 <p id='error'></p>";
                             }
                         }
                         ?>
@@ -80,7 +79,6 @@ include "includes/data-collector.php"; ?>
                     </div>
                 </form>
             </div>
-        </div>
-    </div>
-    <?php include "includes/footer.php" ?>
+        
+       <?php include "includes/footer.php" ?>
 </body>
