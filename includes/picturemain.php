@@ -1,4 +1,5 @@
+
 <picture>
-  <source srcset="images/Spikefinish.webp" type="image/svg+xml">
-  <img src="images/Spikefinish.webp" class="img-fluid img-thumbnail" alt="cowboy beboob spike">
+  <img width="20%" height="20%" src="images/Spikefinish.webp" class="text-center img-fluid img-thumbnail" alt="cowboy beboob spike">
 </picture>
+            

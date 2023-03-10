@@ -25,21 +25,21 @@ include "includes/data-collector.php"; ?>
     }
     $question = fetchQuestionByID($id, $dbConnection);
     ?>
-    <div class="container d-flex justify-content-center align-items-md-center mt-5 mb-5 ">
+    <div class="container d-flex justify-content-center align-items-md-center mt-5 mb-3 ">
         <div class="col">
             <div class="col">
                 <?php include "includes/picturemain.php" ?>
                 <form class="col" action="<?php echo $actionUrl; ?>" method="post">
-                    <div class="container mt-sm-5 my-1">
-                        <div class="question ml-sm-5 pl-sm-5 pt-2">
+                    <div class="container mt-sm-3 my-1">
+                        <div class="question ml-sm-3 pl-sm-5 pt-2">
                             <div class="py-2 h5"><b>
                                     <?php echo $question["question_text"]; ?>
                                     <br>
                                     <?php echo ($currentQuestionIndex + 1); ?>of
                                     <?php echo $quiz["questionNum"]; ?>
-                                </b>
+                               
                             </div>
-                            <br>
+                       
                             <!--new try -->
                             <input type="hidden" id="questionNum" value="<?php echo $quiz["questionNum"]; ?>" />
                             <input type="hidden" id="lastQuestionIndex" name="lastQuestionIndex"

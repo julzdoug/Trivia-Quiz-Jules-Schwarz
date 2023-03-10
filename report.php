@@ -32,7 +32,7 @@ $maxPoints = $_SESSION["quiz"]["questionNum"];
 
 <body class="bg-success stay" style="--bs-bg-opacity: .5;">
     <?php include "includes/header.php" ?>
-    <div class="container d-flex justify-content-center align-items-md-center mt-5 mb-5 ">
+    <div class="container d-flex justify-content-center align-items-md-center mt-5 mb-0 ">
         <div class="row">
             <?php include "includes/picturemain.php" ?>
             <div class="col-sm-4 mt-3">
@@ -43,7 +43,7 @@ $maxPoints = $_SESSION["quiz"]["questionNum"];
                 </div>
             </div>
         </div>
-        <div class="container d-flex justify-content-center align-items-md-center mt-5 mb-5 ">
+        <div class="container d-flex justify-content-center align-items-md-center mt-3 mb-3 ">
             <div class="d-flex align-items-center pt-3">
                 <div class="ml-auto mr-sm-5">
                     <a class="btn btn-primary" href="index.php" role="button">New Quiz</a>
