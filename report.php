@@ -32,11 +32,11 @@ $maxPoints = $_SESSION["quiz"]["questionNum"];
 
 <body class="bg-success stay" style="--bs-bg-opacity: .5;">
     <?php include "includes/header.php" ?>
-    <div class="container d-flex justify-content-center mt-3 mb-3">
+    <div class="container mt-sm-3 my-1">
 
         <?php include "includes/picturemain.php" ?>
-        <div class="row">
-            <div class="col-sm-4 mt-3">
+        <div class="container mt-sm-3 my-1">
+                        <div class="question ml-sm-3 pl-sm-5 pt-2">
                 <?php echo $totalPoints; ?><br>
                 out of possible
                 <div class="col-sm-4 col mt-3">

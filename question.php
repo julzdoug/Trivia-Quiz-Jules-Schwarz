@@ -25,9 +25,10 @@ include "includes/data-collector.php"; ?>
     }
     $question = fetchQuestionByID($id, $dbConnection);
     ?>
-    <div class="container">
-                     <?php include "includes/picturemain.php" ?>
+    <div class="container mt-sm-3 my-1">
+    <?php include "includes/picturemain.php" ?>
                 <form class="col" action="<?php echo $actionUrl; ?>" method="post">
+                
                     <div class="container mt-sm-3 my-1">
                         <div class="question ml-sm-3 pl-sm-5 pt-2">
                             <div class="py-2 h5"><b>

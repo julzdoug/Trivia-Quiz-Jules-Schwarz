@@ -1,35 +1,38 @@
+.ratio-4x3 {
+  @include media-breakpoint-up(md) {
+    --bs-aspect-ratio: 70%; // 2x1
+  }
+}
+.ratios-4x3 {
+    @include media-breakpoint-up(md) {
+      --bs-aspect-ratio: 50%; // 2x1
+      margin-left: auto;
+        margin-right: auto;
+    }
+  }
 footer {
-    display: block;
-    padding-top: 60px;
+    
 }
 .container{
-    width:auto;
-    height:auto;
+    display:unset;
 }
 .question {
     min-width: 40%;
     min-height: auto;
 }
 
-img {
+.img {
         display: block;
         margin-left: auto;
         margin-right: auto;
-      
+   
 }
-.vids {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        size: 50%;
-}
+
 .stay {
-    min-height:90vh;
-    min-height: 90dvh;
-    display: grid;
-    grid-template-rows:
-    auto
-    1fr
-    auto;
+    min-height:auto;
+    min-height:auto;
+    display:unset;
+
+   
 }
 
